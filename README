@@ -13,7 +13,7 @@ DESCRIZIONE:
 
 DIPENDENZE:
 
-  python=2.6 >
+   python=2.6 >
   
 
 FEATURES:
@@ -50,3 +50,4 @@ tipi di rinomina alle estensioni:
 
     - Aggiunge le estensioni ai file/cartelle che ne sono privi. Specificando 
       il prefisso ('-f' o '-d') se ne determina il risultato per file o cartelle.
+
