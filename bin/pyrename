@@ -1,0 +1,171 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+#
+# PROGRAM-NAME: pyrename
+# VERSION:      (Ver.0.8) 30 August 2012
+# DESCRIPTION:  batch renaming for Unix
+# AUTHOR:       Gianluca Pernigotto <jeanlucperni@gmail.com>
+# LICENSE:      Copyright © Gianluca Pernigotto GPL3 
+
+
+import os
+import sys
+import file_renamer, dir_renamer
+
+helping = """
+ Usage: pyrename -prefix.OPTION [DIRECTORY]
+ See the man page: "man pyrename"
+---------------------------------------------------------------------------"""
+
+
+def positional_par():         # valuta gli argomenti (parametri posizionali) passati dopo il nome del programma
+
+	if len(sys.argv) == 1:
+		print "\033[31;1m\n[PYRENAME]: incomplete path name or bad options.\033[0m"
+		print helping			
+		sys.exit()  
+
+
+	if len(sys.argv) == 2:  
+		if sys.argv[1] == "--version" or sys.argv[1] == "-v":
+			print """
++-----------------------------+
+|\033[34;1m Pyrename - Renamer for Unix \033[0m|
++-----------------------------+\033[34m
+Version: 0.8 (date 30/08/2012) 
+Copyright © 2012 GPL3
+Author: Gianluca "Jean-Luc Pernigò" Pernigotto
+        itamburiditux.blogspot.it
+Please report bugs or suggests to <jeanlucperni@gmail.com>. \033[0m
+"""
+			sys.exit()
+
+		elif sys.argv[1] == "--help" or sys.argv[1] == "-h":
+			print helping
+			sys.exit()
+			
+		elif sys.argv[1] == "-f.namereplace":
+			os.chdir(os.getcwd())
+			file_renamer.f_namereplace()
+			
+		elif sys.argv[1] == "-f.enumerate":
+			os.chdir(os.getcwd())
+			file_renamer.f_enumerate()
+			
+		elif sys.argv[1] == "-f.delnumerate":
+			os.chdir(os.getcwd())
+			file_renamer.f_delnumerate()
+			
+		elif sys.argv[1] == "-f.rename":
+			os.chdir(os.getcwd())
+			file_renamer.f_rename()
+			
+		elif sys.argv[1] == "-f.addname":
+			os.chdir(os.getcwd())
+			file_renamer.f_addname()
+			
+		elif sys.argv[1] == "-f.addext":
+			os.chdir(os.getcwd())
+			file_renamer.f_addext()
+			
+		elif sys.argv[1] == "-f.extreplace":
+			os.chdir(os.getcwd())
+			file_renamer.f_extreplace()
+			
+		########################################## dir		
+			
+		elif sys.argv[1] == "-d.namereplace":
+			os.chdir(os.getcwd())
+			dir_renamer.d_namereplace()
+			
+		elif sys.argv[1] == "-d.enumerate":
+			os.chdir(os.getcwd())
+			dir_renamer.d_enumerate()
+			
+		elif sys.argv[1] == "-d.delnumerate":
+			os.chdir(os.getcwd())
+			dir_renamer.d_delnumerate()
+			
+		elif sys.argv[1] == "-d.rename":
+			os.chdir(os.getcwd())
+			dir_renamer.d_rename()
+			
+		elif sys.argv[1] == "-d.addname":
+			os.chdir(os.getcwd())
+			dir_renamer.d_addname()
+			
+		elif sys.argv[1] == "-d.addext":
+			os.chdir(os.getcwd())
+			dir_renamer.d_addext()
+			
+		elif sys.argv[1] == "-d.extreplace":
+			os.chdir(os.getcwd())
+			dir_renamer.d_extreplace()	
+		
+		else:
+			print "\033[31;1m\n[PYRENAME]: Invalid options: %s\033[0m" % (sys.argv[1])
+			print helping			
+			sys.exit('..Exit')
+
+
+
+	if len(sys.argv) == 3:
+
+		try:
+			os.chdir(sys.argv[2])
+
+		except OSError:
+			print "\033[31;1m\n[PYRENAME]: The path name not exist: %s\033[0m\n" % (sys.argv[2])
+			#print help_short.read()
+			sys.exit("..Exit")
+			
+		if sys.argv[1] == "-f.namereplace":
+			file_renamer.f_namereplace()
+			
+		elif sys.argv[1] == "-f.enumerate":
+			file_renamer.f_enumerate()
+			
+		elif sys.argv[1] == "-f.delnumerate":
+			file_renamer.f_delnumerate()
+			
+		elif sys.argv[1] == "-f.rename":
+			file_renamer.f_rename()
+			
+		elif sys.argv[1] == "-f.addname":
+			file_renamer.f_addname()
+					
+		elif sys.argv[1] == "-f.addext":
+			file_renamer.f_addext()
+			
+		elif sys.argv[1] == "-f.extreplace":
+			file_renamer.f_extreplace()
+			
+		########################################## dir		
+			
+		elif sys.argv[1] == "-d.namereplace":
+			dir_renamer.d_namereplace()
+			
+		elif sys.argv[1] == "-d.enumerate":
+			dir_renamer.d_enumerate()
+			
+		elif sys.argv[1] == "-d.delnumerate":
+			dir_renamer.d_delnumerate()
+			
+		elif sys.argv[1] == "-d.rename":
+			dir_renamer.d_rename()
+			
+		elif sys.argv[1] == "-d.addname":
+			dir_renamer.d_addname()
+			
+		elif sys.argv[1] == "-d.addext":
+			dir_renamer.d_addext()
+			
+		elif sys.argv[1] == "-d.extreplace":
+			dir_renamer.d_extreplace()
+		
+		else:
+			print "\033[31;1m\n[PYRENAME]: Invalid options: %s\033[0m" % (sys.argv[2])
+			#print help_short.read()
+			sys.exit("..Exit")
+
+positional_par()

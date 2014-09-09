@@ -1,0 +1,60 @@
++------------------------------------+
+Tuesday, August 30 2012  Version 0.8
++------------------------------------+
+- rename: Risolto bug nella risoluzione dei nomi esistenti.
+          Ora il controllo è completo e più sicuro.
+
+- Aggiunto il metodo 'delnumerate' per la rimozione numerica progressiva.
+
+- Aggiornamento del manuale 'man pyrename'
+
+- Aggiunta di qualche elemento cosmetico
+
+
++------------------------------------+
+Tuesday, August 29 2012  Version 0.7
++------------------------------------+
+- extreplace: Eliminata funzione che rinominava e aggiungeva l'estensione a tutti i file/dir
+
+- extreplace, addext: Risolto grave bug che sovrascriveva file/dir con lo stesso nome.
+		      Un consistente controllo viene eseguito prima della rinomina.
+
+- extreplace, addext: Risolto bug nel campo di input per la rinomina delle estens. 
+		      Ora l'input non può più essere vuoto.
+
+- extreplace: Risolto bug per cui l'aggiunta di estensione rinominava file/dir con lo stesso nome dell'estensione.
+	      Ora i file/dir senza estensione vengono esclusi.
+
+- Aggiornamento del manuale 'man pyrename'
+
+
++------------------------------------+
+Thursday, August 23 2012  Version 0.6
++------------------------------------+
+- Eliminata funzione obsoleta 'numreplace'
+
+- Aggiunto nelle funzioni di numerazione 'namereplace' ed 'enumerate' l'opzione 'tail' e 'head'
+
+- Aggiornamento del manuale 'man pyrename' 
+
+
++------------------------------------+
+Sunday, August 19 2012  Version 0.5
++------------------------------------+
+- Risolto grave bug nelle funzioni 'rename' ed 'addname' che sovrascrivevano file o cartelle con lo stesso nome.
+
+- Aggiunto metodi 'addext' ed 'ext_replace' per la rinominazione delle estensioni
+
+- Aggiornamento del manuale 'man pyrename' 
+
+- Cambiata la struttura del package, ora il binario riceve solo argomenti mentre le funzioni sono nei moduli.
+
+- Rimossi file per 'help'
+
+
++------------------------------------+
+Tuesday Sept. 21  2010  Version 0.4
++------------------------------------+
+
+Initial release
+ 
