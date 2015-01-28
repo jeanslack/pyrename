@@ -6,13 +6,13 @@ pyrename \- Utility di rinominazione di massa (Batch renaming) per Unix.
 \f |-f.|-d.|\fR \fIOPTION\fR [\fIDIRECTORY\fR] 
  
 .SH DESCRIZIONE
-Pyrename, consente distintivamente varie tipologie di rinomina su gruppi di soli file o specificamente di sole directory in un percorso stabilito. Oltre al comune renaming (modifica, aggiunta o sostituzione di stringhe), comprende funzioni per la rinomina con numerazione progressiva ordinata, rimozione della numerazione, rinomina delle estensioni, aggiunta di estensione ai file che ne sono privi e una funzione per aggiungere stringhe di testo ai file o directory che hanno gi‡ nomi diversi e cioË senza il medesimo rapporto di match. In tutti i metodi di rinomina, la separazione distinta tra file e cartelle da rinominare viene programmata con l'uso di semplici prefissi. La numerazione progressiva di rinomina parte da un ordine alfanumerico che preserva l'ordine iniziale sia dei file che delle cartelle.
+Pyrename, consente distintivamente varie tipologie di rinomina su gruppi di soli file o specificamente di sole directory in un percorso stabilito. Oltre al comune renaming (modifica, aggiunta o sostituzione di stringhe), comprende funzioni per la rinomina con numerazione progressiva ordinata, rimozione della numerazione, rinomina delle estensioni, aggiunta di estensione ai file che ne sono privi e una funzione per aggiungere stringhe di testo ai file o directory che hanno gi√† nomi diversi e cio√® senza il medesimo rapporto di match. In tutti i metodi di rinomina, la separazione distinta tra file e cartelle da rinominare viene programmata con l'uso di semplici prefissi. La numerazione progressiva di rinomina parte da un ordine alfanumerico che preserva l'ordine iniziale sia dei file che delle cartelle.
 
 .SH USO
-Come parametro posizionale, il path-name Ë facoltativo e puÚ essere immesso dopo il prefisso+opzione,
+Come parametro posizionale, il path-name √® facoltativo e pu√≤ essere immesso dopo il prefisso+opzione,
 o essere omesso e navigare tra le directory in altri modi prima di avviare pyrename. 
 
-Ogni 'metodo' di rinomina puÚ solo essere applicato separatamente ai file o alle cartelle attraverso l'uso dei 'prefissi' che seguono il metodo opzionale descritto nel paragrafo OPZIONI.   
+Ogni 'metodo' di rinomina pu√≤ solo essere applicato separatamente ai file o alle cartelle attraverso l'uso dei 'prefissi' che seguono il metodo opzionale descritto nel paragrafo OPZIONI.   
 
 .sp
 .I Prefissi:
@@ -27,11 +27,11 @@ Ogni 'metodo' di rinomina puÚ solo essere applicato separatamente ai file o alle
 .TP
 .SS
 .B rename
-Questo metodo Ë un "jolly", modifica, aggiunge e sostituisce determinate stringhe ai nomi con il medesimo match, ma con il potere di operare sia sui nomi che sulle estensioni. Il metodo esegue un controllo di congruenza, cosicchË se una corrispondenza non viene soddisfatta avvisa: per esempio quando un oggetto esistesse gi‡ con lo stesso nome degli oggetti che verrebbero rinominati (questa Ë una sicurezza che permetter‡ di non sovrascrivere file o cartelle). Per la rinomina delle estensioni, si consiglia di affidarsi ai metodi dedicati 'extreplace' o 'addext', a meno di saper cosa fare.
+Questo metodo √® un "jolly", modifica, aggiunge e sostituisce determinate stringhe ai nomi con il medesimo match, ma con il potere di operare sia sui nomi che sulle estensioni. Il metodo esegue un controllo di congruenza, cosicch√® se una corrispondenza non viene soddisfatta avvisa: per esempio quando un oggetto esistesse gi√† con lo stesso nome degli oggetti che verrebbero rinominati (questa √® una sicurezza che permetter√† di non sovrascrivere file o cartelle). Per la rinomina delle estensioni, si consiglia di affidarsi ai metodi dedicati 'extreplace' o 'addext', a meno di saper cosa fare.
 .TP
 .SS
 .B addname  
-Aggiunge delle stringhe ai nomi senza nessun tipo di match (i nomi di origine possono essere diversi per ogni oggetto), consentendoci di decidere la posizione della nuova stringa, in testa (head) o in coda (tail) del nome originale. Se una corrispondenza non viene soddisfatta avvisa: per esempio quando un oggetto esiste gi‡ con lo stesso nome (questa Ë una sicurezza che permetter‡ di non sovrascrivere nessun file).
+Aggiunge delle stringhe ai nomi senza nessun tipo di match (i nomi di origine possono essere diversi per ogni oggetto), consentendoci di decidere la posizione della nuova stringa, in testa (head) o in coda (tail) del nome originale. Se una corrispondenza non viene soddisfatta avvisa: per esempio quando un oggetto esiste gi√† con lo stesso nome (questa √® una sicurezza che permetter√† di non sovrascrivere nessun file).
 Questo metodo non prende in considerazone l'estensione che invece viene mantenuta invariata.
 .TP
 .I Metodi di rinomina con numerazione progressiva:
@@ -47,18 +47,18 @@ Assieme alla numerazione viene posto il carattere "underscore" per motivi di sep
 .TP
 .SS
 .B delnumerate
-Questo metodo toglie la numerazione agli oggetti che sono stati precedentemente numerati con il metodo 'enumerate', ma ci sono delle limitazioni: gli oggetti devono avere una numerazione progressiva ordinata che inizia da '1' e comunque in senso crescente, in caso contrario il processo sar‡ parziale e disordinato, o tuttalpi˘ non succeder‡ nulla. Se una corrispondenza non viene soddisfatta avvisa: per esempio quando un oggetto esistesse gi‡ con lo stesso nome degli oggetti che verrebbero rinominati (questa Ë una sicurezza che permetter‡ di non sovrascrivere file o cartelle).
+Questo metodo toglie la numerazione agli oggetti che sono stati precedentemente numerati con il metodo 'enumerate', ma ci sono delle limitazioni: gli oggetti devono avere una numerazione progressiva ordinata che inizia da '1' e comunque in senso crescente, in caso contrario il processo sar√† parziale e disordinato, o tuttalpi√π non succeder√† nulla. Se una corrispondenza non viene soddisfatta avvisa: per esempio quando un oggetto esistesse gi√† con lo stesso nome degli oggetti che verrebbero rinominati (questa √® una sicurezza che permetter√† di non sovrascrivere file o cartelle).
 
 .TP
 .I Metodi di rinomina alle estensioni:
 .TP
 .SS
 .B extreplace
-Il metodo 'extreplace' Ë in esclusiva per la rinomina delle sole estensioni. E' un metodo sicuro per quanto riguarda il controllo dei nomi degli oggetti esistenti. Rimpiazza le estensioni incontrate in un match: la rinomina delle estensioni avviene immettendo l'estensione che si vuol cambiare in un gruppo di oggetti e l'estensione sostitutiva, preservando tutti gli altri file con differente estensione o privi di estensione. Specificando il prefisso ('-f' o '-d') se ne determina il risultato per file o cartelle. Gli input (campi di immissione) non possono essere vuoti, onde evitare rinomine incongruenti. Se la necessit‡ implica di togliere le estensioni in un match, usare il metodo 'rename'.
+Il metodo 'extreplace' √® in esclusiva per la rinomina delle sole estensioni. E' un metodo sicuro per quanto riguarda il controllo dei nomi degli oggetti esistenti. Rimpiazza le estensioni incontrate in un match: la rinomina delle estensioni avviene immettendo l'estensione che si vuol cambiare in un gruppo di oggetti e l'estensione sostitutiva, preservando tutti gli altri file con differente estensione o privi di estensione. Specificando il prefisso ('-f' o '-d') se ne determina il risultato per file o cartelle. Gli input (campi di immissione) non possono essere vuoti, onde evitare rinomine incongruenti. Se la necessit√† implica di togliere le estensioni in un match, usare il metodo 'rename'.
 .TP
 .SS
 .B addext
-Addext, contrariamente ad 'extreplace', aggiunge l'estensione desiderata solo agli oggetti che sono privi di estensione. L'aggiunta dell'estensione avviene immettendo l'input con l'estensione scelta. Anche questo metodo Ë relativamente sicuro per quanto riguarda il controllo dei nomi degli oggetti esistenti. L'input (campo di immissione) non puÚ essere vuoto, onde evitare rinomine incongruenti. Se la necessit‡ implica di togliere le estensioni in un match, usare il metodo 'rename'.
+Addext, contrariamente ad 'extreplace', aggiunge l'estensione desiderata solo agli oggetti che sono privi di estensione. L'aggiunta dell'estensione avviene immettendo l'input con l'estensione scelta. Anche questo metodo √® relativamente sicuro per quanto riguarda il controllo dei nomi degli oggetti esistenti. L'input (campo di immissione) non pu√≤ essere vuoto, onde evitare rinomine incongruenti. Se la necessit√† implica di togliere le estensioni in un match, usare il metodo 'rename'.
 
 .SH ALTRE OPZIONI
 .TP 
@@ -75,10 +75,10 @@ Mostra un breve aiuto sulle opzioni contestuali ed esce.
 .TP
 .B pyrename -f.rename 
 .SH AUTHORS
-Written by Gianluca Pernigotto, Alias: Jean-Luc PernigÚ <jeanlucperni@gmail.com> .
+Written by Gianluca Pernigotto, Alias: Jean-Luc Pernig√≤ <jeanlucperni@gmail.com> .
 Homepage: http://itamburiditux.blogspot.com/
 .SH COPYRIGHT
-Copyright  ©  2012  Free Software Foundation, Inc.  License GPLv3+: GNU
+Copyright  ¬©  2012  Free Software Foundation, Inc.  License GPLv3+: GNU
 GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
 This is free software: you are free  to  change  and  redistribute  it.
 There is NO WARRANTY, to the extent permitted by law.

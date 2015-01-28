@@ -5,7 +5,7 @@
 # VERSION:      (Ver.0.8) 30 August 2012
 # DESCRIPTION:  batch renaming for Unix
 # AUTHOR:       Gianluca Pernigotto <jeanlucperni@gmail.com>
-# LICENSE:      Copyright © Gianluca Pernigotto GPL3 
+# LICENSE:      Copyright Â© Gianluca Pernigotto GPL3 
 
 
 import os
@@ -33,8 +33,8 @@ def positional_par():         # valuta gli argomenti (parametri posizionali) pas
 |\033[34;1m Pyrename - Renamer for Unix \033[0m|
 +-----------------------------+\033[34m
 Version: 0.8 (date 30/08/2012) 
-Copyright © 2012 GPL3
-Author: Gianluca "Jean-Luc Pernigò" Pernigotto
+Copyright Â© 2012 GPL3
+Author: Gianluca "Jean-Luc PernigÃ²" Pernigotto
         itamburiditux.blogspot.it
 Please report bugs or suggests to <jeanlucperni@gmail.com>. \033[0m
 """
