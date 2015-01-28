@@ -1,5 +1,17 @@
 +------------------------------------+
-Tuesday, August 30 2012  Version 0.8
+January 28 2015  Version 0.9
++------------------------------------+
+
+- This is first stable release
+
+- Translation done completely in English 
+
+- Make a setup.py and MANIFEST.in for building a package for your Linux 
+  distribution (Debian and derived, Slackware)
+
+
++------------------------------------+
+August 30 2012  Version 0.8
 +------------------------------------+
 - rename: Risolto bug nella risoluzione dei nomi esistenti.
           Ora il controllo è completo e più sicuro.
@@ -12,7 +24,7 @@ Tuesday, August 30 2012  Version 0.8
 
 
 +------------------------------------+
-Tuesday, August 29 2012  Version 0.7
+August 29 2012  Version 0.7
 +------------------------------------+
 - extreplace: Eliminata funzione che rinominava e aggiungeva l'estensione a tutti i file/dir
 
@@ -29,7 +41,7 @@ Tuesday, August 29 2012  Version 0.7
 
 
 +------------------------------------+
-Thursday, August 23 2012  Version 0.6
+August 23 2012  Version 0.6
 +------------------------------------+
 - Eliminata funzione obsoleta 'numreplace'
 
@@ -39,7 +51,7 @@ Thursday, August 23 2012  Version 0.6
 
 
 +------------------------------------+
-Sunday, August 19 2012  Version 0.5
+August 19 2012  Version 0.5
 +------------------------------------+
 - Risolto grave bug nelle funzioni 'rename' ed 'addname' che sovrascrivevano file o cartelle con lo stesso nome.
 
@@ -53,7 +65,7 @@ Sunday, August 19 2012  Version 0.5
 
 
 +------------------------------------+
-Tuesday Sept. 21  2010  Version 0.4
+Sept. 21  2010  Version 0.4
 +------------------------------------+
 
 Initial release

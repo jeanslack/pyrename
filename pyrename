@@ -2,27 +2,32 @@
 # -*- coding: UTF-8 -*-
 #
 # PROGRAM-NAME: pyrename
-# VERSION:      (Ver.0.8) 30 August 2012
+# VERSION:      0.9
 # DESCRIPTION:  batch renaming for Unix
-# AUTHOR:       Gianluca Pernigotto <jeanlucperni@gmail.com>
-# LICENSE:      Copyright © Gianluca Pernigotto GPL3 
+# AUTHOR:       Gianluca jeanslack Pernigotto <jeanlucperni@gmail.com>
+# LICENSE:      Copyright © Gianluca jeanslack Pernigotto GPL3 
+# FIRST RELEASE: v0.8 (date 30/08/2012)
+# LAST REVISION:  date 28/01/215
 
 
 import os
 import sys
-import file_renamer, dir_renamer
+from renamerpack import file_renamer, dir_renamer
 
 helping = """
  Usage: pyrename -prefix.OPTION [DIRECTORY]
  See the man page: "man pyrename"
----------------------------------------------------------------------------"""
+ """
 
 
-def positional_par():         # valuta gli argomenti (parametri posizionali) passati dopo il nome del programma
-
+def positional_par():
+	"""
+	valuta gli argomenti (parametri posizionali) passati dopo il nome 
+	del programma
+	"""
 	if len(sys.argv) == 1:
 		print "\033[31;1m\n[PYRENAME]: incomplete path name or bad options.\033[0m"
-		print helping			
+		print helping
 		sys.exit()  
 
 
@@ -32,10 +37,11 @@ def positional_par():         # valuta gli argomenti (parametri posizionali) pas
 +-----------------------------+
 |\033[34;1m Pyrename - Renamer for Unix \033[0m|
 +-----------------------------+\033[34m
-Version: 0.8 (date 30/08/2012) 
-Copyright © 2012 GPL3
-Author: Gianluca "Jean-Luc Pernigò" Pernigotto
-        itamburiditux.blogspot.it
+Version: 0.9 (date 28/01/2015)
+Last Revison: date 28/01/2015
+Copyright © 2012-2015 GPL3
+Author: Gianluca "jeanslack" Pernigotto
+        https://github.com/jeanslack/pyrename
 Please report bugs or suggests to <jeanlucperni@gmail.com>. \033[0m
 """
 			sys.exit()
@@ -72,7 +78,7 @@ Please report bugs or suggests to <jeanlucperni@gmail.com>. \033[0m
 			os.chdir(os.getcwd())
 			file_renamer.f_extreplace()
 			
-		########################################## dir		
+		########################################## dir
 			
 		elif sys.argv[1] == "-d.namereplace":
 			os.chdir(os.getcwd())
@@ -100,11 +106,12 @@ Please report bugs or suggests to <jeanlucperni@gmail.com>. \033[0m
 			
 		elif sys.argv[1] == "-d.extreplace":
 			os.chdir(os.getcwd())
-			dir_renamer.d_extreplace()	
+			dir_renamer.d_extreplace()
 		
 		else:
-			print "\033[31;1m\n[PYRENAME]: Invalid options: %s\033[0m" % (sys.argv[1])
-			print helping			
+			print "\033[31;1m\n[PYRENAME]: Invalid options: %s\033[0m" % (
+																sys.argv[1])
+			print helping
 			sys.exit('..Exit')
 
 
@@ -115,7 +122,8 @@ Please report bugs or suggests to <jeanlucperni@gmail.com>. \033[0m
 			os.chdir(sys.argv[2])
 
 		except OSError:
-			print "\033[31;1m\n[PYRENAME]: The path name not exist: %s\033[0m\n" % (sys.argv[2])
+			print ("\033[31;1m\n[PYRENAME]: The path name not "
+										"exist: %s\033[0m\n" % (sys.argv[2]))
 			#print help_short.read()
 			sys.exit("..Exit")
 			
@@ -164,7 +172,8 @@ Please report bugs or suggests to <jeanlucperni@gmail.com>. \033[0m
 			dir_renamer.d_extreplace()
 		
 		else:
-			print "\033[31;1m\n[PYRENAME]: Invalid options: %s\033[0m" % (sys.argv[2])
+			print "\033[31;1m\n[PYRENAME]: Invalid options: %s\033[0m" % (
+																sys.argv[2])
 			#print help_short.read()
 			sys.exit("..Exit")
 
