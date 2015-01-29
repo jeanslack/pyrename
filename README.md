@@ -72,7 +72,11 @@ Open a terminal window and type:
 Installation
 -------
 
-* DEBIAN:
+--------------------------------------------------------------------------------
+
+DEBIAN:
+
+--------------------------------------------------------------------------------
 
 Extra dependencies for build package with distutils:
 
@@ -86,24 +90,24 @@ This should create a python-pyrename_version_all.deb in the new deb_dist directo
 
 see the setup.py script-file for more info on how-to build .deb package
 
+--------------------------------------------------------------------------------
 
-* SLACKWARE:
+SLACKWARE:
+
+--------------------------------------------------------------------------------
 
 First require pysetuptools at: [slackbuild.org](http://slackbuilds.org/repository/14.1/python/pysetuptools/)
 
-Is available a SlackBuild script to build package .tgz or .gz for Slackware distribution that you can see at:
+Is available a SlackBuild script to build package .tgz for Slackware distribution that you can see 
+here: [My-Repo-Slackware](https://github.com/jeanslack/My-Repo-Slackware/tree/master/slackware/utilities/pyrename)
 
-[my slackbuild repository](https://github.com/jeanslack/My-Repo-Slackware/tree/master/slackware/utilities/pyrename)
-
-If you want download entire content directory quickly, open a terminal window in a your path and type:
+If you want download entire content directory quickly, open a terminal window and type:
 
 		svn checkout https://github.com/jeanslack/My-Repo-Slackware/trunk/slackware/utilities/pyrename
 
-Then download the pyrename tarball source code at:
+Then download the pyrename tarball source code: [pyrename-0.9.tar.gz/releases](https://github.com/jeanslack/pyrename/releases)
 
-[https://github.com/jeanslack/pyrename/releases](https://github.com/jeanslack/pyrename/releases)
-
-..and place it into slackbuild folder unzipped.
+..and place it into the unzipped slackbuild folder .
 
 For instructions on how to use the SlackBuilds, see:
 
