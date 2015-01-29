@@ -96,28 +96,10 @@ SLACKWARE:
 
 --------------------------------------------------------------------------------
 
-First require pysetuptools at: [slackbuild.org](http://slackbuilds.org/repository/14.1/python/pysetuptools/)
+Require pysetuptools at: [slackbuild.org](http://slackbuilds.org/repository/14.1/python/pysetuptools/)
 
-Is available a SlackBuild script to build package .tgz for Slackware distribution that you can see 
-here: [My-Repo-Slackware](https://github.com/jeanslack/My-Repo-Slackware/tree/master/slackware/utilities/pyrename)
+Then download the SlackBuild: [My-Repo-Slackware](https://github.com/jeanslack/My-Repo-Slackware/tree/master/slackware/utilities/pyrename)
 
-If you want download entire content directory quickly, open a terminal window and type:
-
-		svn checkout https://github.com/jeanslack/My-Repo-Slackware/trunk/slackware/utilities/pyrename
-
-Then download the pyrename tarball source code: [pyrename-0.9.tar.gz/releases](https://github.com/jeanslack/pyrename/releases)
-
-..and place it into the unzipped slackbuild folder .
-
-For instructions on how to use the SlackBuilds, see:
-
-[http://slackbuilds.org/howto/](http://slackbuilds.org/howto/)
-
-[http://www.slackwiki.com/SlackBuild_Scripts](http://www.slackwiki.com/SlackBuild_Scripts)
-
-[http://www.slacky.eu/slacky/Slackware_%26_SlackBuild](http://www.slacky.eu/slacky/Slackware_%26_SlackBuild)
-
-Remember: first install pysetuptools
 
 --------------------------------------------------------------------------------
 
