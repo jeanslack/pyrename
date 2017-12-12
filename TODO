@@ -1,3 +1,8 @@
 
 Improve the positioning of the controls:
 like this: pyrename -prefix.options 'path/dir-name'
+
+12-12-2017:
+- the man(ual) is outdated and not well formatted
+- write an contextual help for interactive console
+- write a datastrings.py for All general info of the pyrename
